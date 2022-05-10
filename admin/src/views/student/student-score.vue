@@ -25,6 +25,9 @@
   <h1 v-else>目前禁止察看成绩</h1>
 </template>
 <script setup>
+import { ElMessageBox } from 'element-plus'
+import { ElMessage } from 'element-plus'
+
 import { ref } from 'vue'
 import { useStore } from 'vuex'
 import api from '@/modules/api'
@@ -83,29 +86,40 @@ api(`select * from achievement where stucode='${localStorage.student}'`).then(
 
     key.forEach((item, index) => {
       // console.log(item)
-
+      // if (values[index] < 60) {
+      //   ElMessage.warning('请你准备' + `${item}` + '补考')
+      // }
       if (values[2] < 60) {
         console.log(scoreValue[index])
+
         values[2] += '--请你准备补考'
+        ElMessage.warning('请你准备' + `${key[2]}` + '补考')
       }
       if (values[3] < 60) {
         values[3] += '--请你准备补考'
+        ElMessage.warning('请你准备' + `${key[3]}` + '补考')
       }
       if (values[4] < 60) {
         values[4] += '--请你准备补考'
+        ElMessage.warning('请你准备' + `${key[4]}` + '补考')
       }
       if (values[5] < 60) {
         values[5] += '--请你准备补考'
+        ElMessage.warning('请你准备' + `${key[5]}` + '补考')
       }
       if (values[6] < 60) {
         values[6] += '--请你准备补考'
+        ElMessage.warning('请你准备' + `${key[6]}` + '补考')
       }
       if (values[7] < 60) {
         values[7] += '--请你准备补考'
+        ElMessage.warning('请你准备' + `${key[9]}` + '补考')
       }
       if (values[9] < 60) {
         values[9] += '--请你准备重修'
+        ElMessage.warning('请你准备重修')
       }
+
       // console.log(key)
       data.value.push({
         key: item,
