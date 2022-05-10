@@ -52,4 +52,4 @@ app.use('/', require('./teacher/teacher-excel')); //读取excel成绩
 
 
 
-app.listen(6789, () => console.log(`Example app listening on port port!`))
+app.listen(6789, () => console.log(`Example app listening on port 6789!`))

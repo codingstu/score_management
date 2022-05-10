@@ -2,8 +2,8 @@ const mysql = require('mysql');
 const connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: '',
-    database: 'school',
+    password: 'admin',
+    database: 'sys',
     multipleStatements: true, //允许多条语句
     timezone: "SYSTEM", //优化时间格式
 

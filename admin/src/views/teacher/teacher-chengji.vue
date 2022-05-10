@@ -19,7 +19,7 @@
       <i class="el-icon-arrow-up" v-show="isSort != 'true' && isSort"></i>
       <i class="el-icon-arrow-down" v-show="isSort != 'true' && !isSort"></i>
     </el-button>
-    <el-button @click="log" type="primary" class="log">打印成绩</el-button>
+    <!-- <el-button @click="log" type="primary" class="log">打印成绩</el-button> -->
     <el-button type="primary" class="log" @click="isEchart">成绩分析</el-button>
   </div>
   <el-table :data="tableData" style="width: 100%">
@@ -360,7 +360,7 @@ function apply() {
   position: fixed;
   top: 0px;
   left: 0px;
-  background: rgb(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   .box {
     width: 300px;
     height: 250px;
