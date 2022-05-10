@@ -83,7 +83,7 @@ api(`select * from achievement where stucode='${localStorage.student}'`).then(
 
     key.forEach((item, index) => {
       // console.log(item)
-      // console.log(index)
+
       if (values[2] < 60) {
         console.log(scoreValue[index])
         values[2] += '--请你准备补考'
